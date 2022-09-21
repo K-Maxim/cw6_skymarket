@@ -9,6 +9,7 @@ packages = [{include = "cw6_skymarket"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 drf-spectacular = "^0.24.0"
+djangorestframework-simplejwt = "^5.2.0"
 
 
 [build-system]
