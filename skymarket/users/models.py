@@ -11,12 +11,43 @@ class User(AbstractBaseUser):
         (USER, USER)
     ]
 
-    # first_name = models.CharField(max_length=100, null=True)
-    last_name = models.CharField(max_length=150, null=True)
-    phone = models.CharField(max_length=20, null=True)
-    email = models.EmailField(unique=True, max_length=50)
-    password = models.CharField(max_length=200)
-    role = models.CharField(max_length=5, choices=ROLES, default='user', null=True)
+    first_name = models.CharField(
+        max_length=50,
+        verbose_name="Имя",
+        help_text="Введите имя, максимально 50 символов",
+    )
+
+    last_name = models.CharField(
+        max_length=50,
+        verbose_name="Фамилия",
+        help_text="Введите имя, максимально 50 символов",
+    )
+
+    email = models.EmailField(
+        unique=True,
+        help_text="Укажите электронную почту",
+    )
+
+    phone = models.CharField(
+        max_length=25,
+        verbose_name="Номер телефона",
+        help_text="Укажите телефон для связи",
+
+    )
+
+    role = models.CharField(
+        max_length=20,
+        choices=ROLES,
+        default=USER,
+        verbose_name="Роль пользователя",
+        help_text="Выберите роль пользователя",
+    )
+
+    is_active = models.BooleanField(
+        verbose_name="Аккаунт активен",
+        help_text="Укажите, активен ли аккаунт"
+    )
+
     image = models.ImageField(upload_to='user_avatars/', null=True)
 
     USERNAME_FIELD = 'email'
