@@ -45,7 +45,8 @@ class User(AbstractBaseUser):
 
     is_active = models.BooleanField(
         verbose_name="Аккаунт активен",
-        help_text="Укажите, активен ли аккаунт"
+        help_text="Укажите, активен ли аккаунт",
+        null=True
     )
 
     image = models.ImageField(upload_to='user_avatars/', null=True)
