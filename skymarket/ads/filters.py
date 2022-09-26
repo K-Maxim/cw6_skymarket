@@ -1,6 +1,6 @@
 import django_filters
 
-from skymarket.ads.models import Ad
+from ads.models import Ad
 
 
 class AdFilter(django_filters.rest_framework.FilterSet):

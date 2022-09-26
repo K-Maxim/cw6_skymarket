@@ -1,6 +1,6 @@
 # TODO здесь производится настройка пермишенов для нашего проекта
 from rest_framework.permissions import BasePermission
-from skymarket.users.models import User
+from users.models import User
 
 
 class UserPermission(BasePermission):
