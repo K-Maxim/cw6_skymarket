@@ -39,6 +39,5 @@ class UserManager(BaseUserManager):
             password=password,
             role="admin"
         )
-
         user.save(using=self._db)
         return user
