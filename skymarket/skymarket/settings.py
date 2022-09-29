@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    'djoser',
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
@@ -46,7 +47,6 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "corsheaders",
     'django_filters',
-    'djoser',
     "users",
     "ads",
     "redoc",
