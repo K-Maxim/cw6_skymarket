@@ -98,7 +98,7 @@ REST_FRAMEWORK = {
 DJOSER = {
     'SERIALIZERS': {
         'user_create': 'users.serializers.UserRegistrationSerializer',
-        "current_user": 'users.serializers.CurrentUserSerializer'
+        'current_user': 'users.serializers.UserCurrentSerializer'
     },
     'LOGIN_FIELD': 'email',
     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
@@ -106,6 +106,7 @@ DJOSER = {
         'password_reset': 'users.email.PasswordResetEmail'
     }
 }
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
