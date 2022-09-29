@@ -8,7 +8,7 @@ ads_router = routers.SimpleRouter()
 ads_router.register('ads', AdViewSet)
 
 comments_router = routers.SimpleRouter()
-comments_router.register('comments', CommentViewSet)
+comments_router.register('comments', CommentViewSet, basename='comments')
 
 urlpatterns = [
     path("", include(ads_router.urls)),
