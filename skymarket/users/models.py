@@ -15,12 +15,14 @@ class User(AbstractBaseUser):
         max_length=50,
         verbose_name="Имя",
         help_text="Введите имя, максимально 50 символов",
+        null=True
     )
 
     last_name = models.CharField(
         max_length=50,
         verbose_name="Фамилия",
         help_text="Введите имя, максимально 50 символов",
+        null=True
     )
 
     email = models.EmailField(
@@ -32,7 +34,7 @@ class User(AbstractBaseUser):
         max_length=25,
         verbose_name="Номер телефона",
         help_text="Укажите телефон для связи",
-
+        null=True
     )
 
     role = models.CharField(
