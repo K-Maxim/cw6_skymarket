@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 
 from ads.models.ads import Ad
+from users.models import User
 
 
 class Comment(models.Model):
@@ -11,9 +12,10 @@ class Comment(models.Model):
         auto_now_add=True,
         verbose_name="Время создания объявления",
         help_text="Введите время создания объявления",
+        null=True
     )
     ad = models.ForeignKey(Ad, on_delete=models.CASCADE, null=True)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     class Meta:
         verbose_name = 'Комментарий'
