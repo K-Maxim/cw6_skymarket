@@ -56,7 +56,7 @@ class AdViewSet(ModelViewSet):
 
 
 class CommentViewSet(ModelViewSet):
-    serializer_class = CommentSerializer
+    serializer_class = CommentListSerializer
     serializer_action_classes = {
         'list': CommentListSerializer,
         'retrieve': CommentListSerializer,
