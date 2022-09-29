@@ -23,4 +23,4 @@ class UserRegistrationSerializer(UserCreateSerializer):
 class UserCurrentSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'phone']
+        fields = '__all__'
