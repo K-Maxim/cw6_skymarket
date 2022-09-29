@@ -7,9 +7,12 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from ads.filters import AdFilter
-from ads.models import Ad, Comment
+from ads.models.ads import Ad
+from ads.models.comments import Comment
+
 from ads.permissions import UserPermission, IsOwner, IsAdmin
-from ads.serializers import AdSerializer, AdDetailSerializer, CommentSerializer, AdCreateSerializer
+from ads.serializers.ads import AdDetailSerializer, AdSerializer, AdCreateSerializer, CommentSerializer
+from ads.serializers.comments import CommentListSerializer, CommentCreateSerializer
 
 
 class AdPagination(pagination.PageNumberPagination):
