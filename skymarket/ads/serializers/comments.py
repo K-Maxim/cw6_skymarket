@@ -38,7 +38,8 @@ class CommentListSerializer(serializers.ModelSerializer):
 
     def get_author_image_url(self, obj):
         request = self.context.get("request")
-        image_url = obj.author.image.url if obj.author.image else '/django_media/user_avatars/avatar_placeholder.jpg'
+        image_url = obj.author.image.url if obj.author.image else '/django_media/user_avatars/' \
+                                                                  '1493287748_1487679899_icon-user-640x640.png'
         return request.build_absolute_uri(image_url)
 
 
