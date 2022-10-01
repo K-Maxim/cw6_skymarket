@@ -1,17 +1,13 @@
-from django.shortcuts import get_object_or_404
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import pagination, viewsets
+from rest_framework import pagination
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-from ads.filters import AdFilter
 from ads.models.ads import Ad
 from ads.models.comments import Comment
 
-from ads.permissions import UserPermission, IsOwner, IsAdmin
-from ads.serializers.ads import AdDetailSerializer, AdSerializer, AdCreateSerializer, CommentSerializer
+from ads.permissions import UserPermission
+from ads.serializers.ads import AdDetailSerializer, AdSerializer, AdCreateSerializer
 from ads.serializers.comments import CommentListSerializer, CommentCreateSerializer
 
 
